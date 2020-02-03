@@ -71,7 +71,7 @@ class BookLibraryAdd extends React.Component {
         </div>
         <div className="inputContainer">
           <input
-            className="input"
+            className="inputField"
             placeholder="Name"
             type="text"
             value={this.state.name}
@@ -80,7 +80,7 @@ class BookLibraryAdd extends React.Component {
         </div>
         <div className="inputContainer">
           <input
-            className="input"
+            className="inputField"
             placeholder="Author"
             type="text"
             value={this.state.author}
@@ -89,7 +89,7 @@ class BookLibraryAdd extends React.Component {
         </div>
         <div className="inputContainer">
           <input
-            className="input"
+            className="inputField"
             placeholder="Description"
             type="text"
             value={this.state.description}
@@ -98,7 +98,7 @@ class BookLibraryAdd extends React.Component {
         </div>
         <div className="inputContainer">
           <input
-            className="input"
+            className="inputField"
             placeholder="Count"
             type="number"
             value={this.state.count}
@@ -107,7 +107,7 @@ class BookLibraryAdd extends React.Component {
         </div>
         <div className="inputContainer">
           <input
-            className="input"
+            className="inputField"
             placeholder="Genre"
             type="text"
             value={this.state.genre}
