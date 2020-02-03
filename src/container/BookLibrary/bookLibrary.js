@@ -8,15 +8,14 @@ import "./bookLibrary.css";
 function BookLibrary() {
   return (
     <div className="BookLibrary">
-      <h1>Book Library</h1>
       <Tabs>
-        <div label="Add">
+        <div label="Add Books" icon="fas fa-folder-plus">
           <BookLibraryAdd />
         </div>
-        <div label="View">
+        <div label="View Books" icon="fas fa-list">
           <BookLibraryView />
         </div>
-        <div label="Edit">
+        <div label="Edit Books" icon="fas fa-edit">
           <BookLibraryEdit />
         </div>
       </Tabs>

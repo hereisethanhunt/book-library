@@ -1,0 +1,108 @@
+.modalBody {
+  padding: 10px;
+  /* background-color: #edf6fc; */
+}
+
+.heading {
+  padding: 15px;
+  text-align: center;
+  font-family: Lato, sans-serif;
+  font-size: 18px;
+  color: #2f363f;
+  letter-spacing: 0;
+  font-weight: 600;
+  border-bottom: 1px solid #2f363f;
+}
+
+.select {
+  margin: auto;
+  max-width: 425px;
+  font-family: Avenir-Book;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.searchRoutes {
+  padding: 15px;
+}
+
+/* cards view */
+
+@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
+
+/* Card Based Layout - Base styles */
+
+.bookLibraryView {
+  padding: 10px;
+}
+
+img {
+  display: block;
+  border: 0;
+  width: 100%;
+  height: auto;
+}
+
+.card {
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.13);
+  background: white;
+  margin-bottom: 2em;
+}
+
+.card-content {
+  padding: 0.8em;
+}
+
+.card-content h2 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+.card-content p {
+  font-size: 80%;
+}
+
+.bookInfo {
+  display: flex;
+  position: relative;
+}
+
+.bookCount {
+  min-width: 20px;
+  color: white;
+  text-align: center;
+  background: rgb(3, 120, 255);
+  position: absolute;
+  right: 0;
+}
+
+.bookGenre {
+  font-size: 12px;
+}
+
+/* Flexbox stuff */
+
+@media screen and (min-width: 40em) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .card {
+    flex: 0 1 calc(50% - 1em);
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .card {
+    flex: 0 1 calc(25% - 1em);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .bookInfo > h2 {
+    width: 200px;
+  }
+}

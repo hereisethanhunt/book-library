@@ -1,17 +1,53 @@
 .tab-list {
-  border-bottom: 1px solid #ccc;
-  padding-left: 0;
+  z-index: 10;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  border-top: 1px solid rgb(238, 238, 238);
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.13);
 }
 
 .tab-list-item {
-  display: inline-block;
-  list-style: none;
-  margin-bottom: -1px;
-  padding: 0.5rem 0.75rem;
+  text-align: center;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  font-weight: 400;
 }
 
 .tab-list-active {
-  background-color: white;
-  border: solid #ccc;
-  border-width: 1px 1px 0 1px;
+  color: rgb(3, 120, 255);
+  border-top: 1px solid rgb(3, 120, 255);
+  background-position: center;
+  transition: background 0.8s;
+}
+
+.tab-list-active:hover {
+  background: #fff radial-gradient(circle, transparent 1%, #fff 1%)
+    center/15000%;
+}
+.tab-list-active:active {
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.menu-icon {
+  font-size: 18px;
+}
+
+.menu-label {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  outline: none;
+  font-size: 12px;
+  letter-spacing: 0.12px;
+  color: rgb(102, 102, 102);
+}
+
+.tab-list-active .menu-label {
+  color: rgb(3, 120, 255);
 }

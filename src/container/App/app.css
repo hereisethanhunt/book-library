@@ -6,3 +6,35 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+body,
+button,
+input,
+select,
+textarea {
+  color: #404040;
+  font-family: "Comfortaa", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  font-family: "Patua One", serif;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 1rem;
+  color: #007489;
+}
+
+p {
+  margin-bottom: 1.5em;
+  color: #898989;
+}
