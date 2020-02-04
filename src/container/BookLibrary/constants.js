@@ -1,0 +1,2 @@
+export const ADD_BOOK = "BOOK_LIBRARY/ADD_BOOK";
+export const EDIT_BOOK = "BOOK_LIBRARY/EDIT_BOOK";

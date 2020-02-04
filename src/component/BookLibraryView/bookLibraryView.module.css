@@ -44,22 +44,23 @@ img {
 }
 
 .card {
+  border-radius: 4px;
   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.13);
   background: white;
   margin-bottom: 2em;
 }
 
-.card-content {
+.cardcontent {
   padding: 0.8em;
 }
 
-.card-content h2 {
+.cardcontent h2 {
   margin-top: 0;
   margin-bottom: 0.5em;
   font-weight: bold;
 }
 
-.card-content p {
+.cardcontent p {
   font-size: 80%;
 }
 
@@ -79,6 +80,10 @@ img {
 
 .bookGenre {
   font-size: 12px;
+}
+
+.cards {
+  margin-bottom: 50px;
 }
 
 /* Flexbox stuff */

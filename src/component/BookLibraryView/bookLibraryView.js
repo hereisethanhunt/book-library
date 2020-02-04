@@ -2,8 +2,8 @@ import React from "react";
 import Select from "react-select";
 import { connect } from "react-redux";
 import defImage from "../../images/defaultBook.png";
+import styles from "./bookLibraryView.module.css";
 
-import "./bookLibraryView.css";
 class BookLibraryView extends React.Component {
   constructor(props) {
     super(props);
@@ -21,6 +21,7 @@ class BookLibraryView extends React.Component {
 
   setBooksView = () => {
     const { BookData } = this.props;
+    console.log(BookData);
     this.setState({ booksCurrentlyInView: BookData });
   };
 
@@ -47,56 +48,51 @@ class BookLibraryView extends React.Component {
 
   render() {
     const { booksCurrentlyInView, bookList, selectedBook } = this.state;
-    console.log(this.state.bookList);
     return (
-      <div className="bookLibraryView">
-        <div className="heading">{"VIEW BOOK"}</div>
-        <div className="viewRegion">
-          <div className="searchRoutes">
-            <Select
-              isClearable={true}
-              isSearchable={true}
-              options={bookList}
-              value={selectedBook}
-              placeholder="Search or select a Book"
-              autoBlur={true}
-              onChange={this.onSelectBook}
-              className="select"
-            ></Select>
-          </div>
-
-          <main className="main-area">
-            <div className="centered">
-              <section className="cards">
-                {booksCurrentlyInView &&
-                  booksCurrentlyInView.length &&
-                  booksCurrentlyInView.length > 0 &&
-                  booksCurrentlyInView.map(el => {
-                    return (
-                      <article className="card" key={el.name + el.author}>
-                        <picture className="thumbnail">
-                          <img
-                            src={defImage}
-                            alt="A banana that looks like a bird"
-                          />
-                        </picture>
-                        <div className="card-content">
-                          <div className="bookInfo">
-                            <h2>{el.name + " - by " + el.author}</h2>
-                            <div className="bookCount">{el.count}</div>
-                          </div>
-                          <div className="bookGenre">
-                            {"GENRE - " + el.genre}
-                          </div>
-                          <p>{el.description}</p>
-                        </div>
-                      </article>
-                    );
-                  })}
-              </section>
-            </div>
-          </main>
+      <div className={styles.bookLibraryView}>
+        <div className={styles.heading}>{"VIEW BOOK"}</div>
+        <div className={styles.searchRoutes}>
+          <Select
+            isClearable={true}
+            isSearchable={true}
+            options={bookList}
+            value={selectedBook}
+            placeholder="Search or select a Book"
+            autoBlur={true}
+            onChange={this.onSelectBook}
+            className={styles.select}
+          ></Select>
         </div>
+
+        <main>
+          <section className={styles.cards}>
+            {booksCurrentlyInView &&
+              booksCurrentlyInView.length &&
+              booksCurrentlyInView.length > 0 &&
+              booksCurrentlyInView.map(el => {
+                return (
+                  <article className={styles.card} key={el.name + el.author}>
+                    <picture className={styles.thumbnail}>
+                      <img
+                        src={defImage}
+                        alt="A banana that looks like a bird"
+                      />
+                    </picture>
+                    <div className={styles.cardcontent}>
+                      <div className={styles.bookInfo}>
+                        <h2>{el.name + " - by " + el.author}</h2>
+                        <div className={styles.bookCount}>{el.count}</div>
+                      </div>
+                      <div className={styles.bookGenre}>
+                        {"GENRE - " + el.genre}
+                      </div>
+                      <p>{el.description}</p>
+                    </div>
+                  </article>
+                );
+              })}
+          </section>
+        </main>
       </div>
     );
   }

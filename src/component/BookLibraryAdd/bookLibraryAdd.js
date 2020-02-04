@@ -2,7 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { addBook } from "./actions";
-import "./bookLibraryAdd.css";
+import styles from "./bookLibraryAdd.module.css";
+// import "./BookLibraryAdd.module.css";
 
 const initialState = {
   description: "",
@@ -43,15 +44,15 @@ class BookLibraryAdd extends React.Component {
 
   render() {
     return (
-      <div className="modalBody">
-        <div className="heading">{"ADD BOOK"}</div>
-        <div className="switch">
-          <div className="switchContainer">
+      <div className={styles.modalBody}>
+        <div className={styles.heading}>{"ADD BOOK"}</div>
+        <div className={styles.switch}>
+          <div className={styles.switchContainer}>
             <div
               className={
                 this.state.switch === "adult"
-                  ? "switchOptions selected"
-                  : "switchOptions"
+                  ? `${styles.switchOptions} ${styles.selected}`
+                  : styles.switchOptions
               }
               onClick={() => this.selectedSwitch("adult")}
             >
@@ -60,8 +61,8 @@ class BookLibraryAdd extends React.Component {
             <div
               className={
                 this.state.switch === "underage"
-                  ? "switchOptions selected"
-                  : "switchOptions"
+                  ? `${styles.switchOptions} ${styles.selected}`
+                  : styles.switchOptions
               }
               onClick={() => this.selectedSwitch("underage")}
             >
@@ -69,45 +70,45 @@ class BookLibraryAdd extends React.Component {
             </div>
           </div>
         </div>
-        <div className="inputContainer">
+        <div className={styles.inputContainer}>
           <input
-            className="inputField"
+            className={styles.inputField}
             placeholder="Name"
             type="text"
             value={this.state.name}
             onChange={e => this.handleChange(e, "name")}
           />
         </div>
-        <div className="inputContainer">
+        <div className={styles.inputContainer}>
           <input
-            className="inputField"
+            className={styles.inputField}
             placeholder="Author"
             type="text"
             value={this.state.author}
             onChange={e => this.handleChange(e, "author")}
           />
         </div>
-        <div className="inputContainer">
+        <div className={styles.inputContainer}>
           <input
-            className="inputField"
+            className={styles.inputField}
             placeholder="Description"
             type="text"
             value={this.state.description}
             onChange={e => this.handleChange(e, "description")}
           />
         </div>
-        <div className="inputContainer">
+        <div className={styles.inputContainer}>
           <input
-            className="inputField"
+            className={styles.inputField}
             placeholder="Count"
             type="number"
             value={this.state.count}
             onChange={e => this.handleChange(e, "count")}
           />
         </div>
-        <div className="inputContainer">
+        <div className={styles.inputContainer}>
           <input
-            className="inputField"
+            className={styles.inputField}
             placeholder="Genre"
             type="text"
             value={this.state.genre}
@@ -115,9 +116,9 @@ class BookLibraryAdd extends React.Component {
           />
         </div>
 
-        <div className="inputContainer">
+        <div className={styles.inputContainer}>
           <button
-            className="button"
+            className={styles.button}
             disabled={
               !this.state.name ||
               !this.state.description ||
