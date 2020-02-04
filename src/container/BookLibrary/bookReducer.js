@@ -15,7 +15,7 @@ export default function(state = {}, action) {
 
       let prevData = [...state];
       const removeOldData = prevData.filter(el => el.id !== key);
-      let newData = [...removeOldData, editedEntry];
+      let newData = [editedEntry, ...removeOldData];
       localStorage.setItem("BookData", JSON.stringify(newData));
       return [...newData];
     }
