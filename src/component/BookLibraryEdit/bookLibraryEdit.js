@@ -25,7 +25,7 @@ class BookLibraryEdit extends React.Component {
   };
 
   editData = (obj, key) => {
-    console.log("trigger action edit book", obj);
+    // console.log("trigger action edit book", obj);
     this.props.editBook(obj, key);
     this.toggle();
   };

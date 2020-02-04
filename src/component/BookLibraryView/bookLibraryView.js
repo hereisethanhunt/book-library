@@ -21,7 +21,6 @@ class BookLibraryView extends React.Component {
 
   setBooksView = () => {
     const { BookData } = this.props;
-    console.log(BookData);
     this.setState({ booksCurrentlyInView: BookData });
   };
 
